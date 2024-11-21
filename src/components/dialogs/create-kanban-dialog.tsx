@@ -29,7 +29,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 const schema = z.object({
   name: z.string().min(3, "Name is too short"),
-  image: z.string(),
+  imagem: z.string(),
 });
 
 type CreateKanbanDialogProps = {
@@ -50,7 +50,7 @@ export function CreateKanbanDialog({
     resolver: zodResolver(schema),
     defaultValues: {
       name: kanban?.name || "",
-      image: kanban?.image || "",
+      imagem: kanban?.imagem || "",
     },
   });
 
@@ -62,7 +62,7 @@ export function CreateKanbanDialog({
 
       queryClient.invalidateQueries({ queryKey: ["kanbans"] });
     },
-    mutationFn: async (data: { name: string; image: string }) => {
+    mutationFn: async (data: { name: string; imagem: string }) => {
       if (!kanban?.id) await api.post("/kanban/kanban", data);
       else if (kanban?.id) await api.patch(`kanban/kanban/${kanban.id}/update`);
     },
@@ -81,7 +81,7 @@ export function CreateKanbanDialog({
   useEffect(() => {
     if (kanban) {
       form.setValue("name", kanban.name || "");
-      form.setValue("image", kanban.image || "");
+      form.setValue("imagem", kanban.imagem || "");
     }
   }, [form, kanban]);
 
@@ -124,7 +124,7 @@ export function CreateKanbanDialog({
               />
 
               <FormField
-                name="image"
+                name="imagem"
                 control={form.control}
                 render={({ field }) => (
                   <FormItem>
