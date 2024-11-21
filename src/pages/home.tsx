@@ -96,7 +96,7 @@ export function HomePage() {
                   setEditKanban({
                     id: kanban.id,
                     name: kanban.name,
-                    image: kanban.imagem,
+                    imagem: kanban.imagem,
                     idMemberCreator: { id: kanban.idMemberCreator },
                   });
                 }}

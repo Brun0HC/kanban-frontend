@@ -236,7 +236,7 @@ export function KanbanPage() {
   return (
     <div className="relative z-10 h-full overflow-hidden w-full">
       <img
-        src={kanban?.image}
+        src={kanban?.imagem}
         className="absolute top-0 aspect-video object-cover h-screen -z-10 w-screen brightness-[.45]"
       />
 
