@@ -105,7 +105,7 @@ export function ProfilePage() {
             control={form.control}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Email</FormLabel>
                 <FormControl>
                   <Input disabled placeholder="Enter email" {...field} />
                 </FormControl>
@@ -119,7 +119,7 @@ export function ProfilePage() {
             control={form.control}
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Phone</FormLabel>
                 <FormControl>
                   <Input placeholder="Enter phone" {...field} />
                 </FormControl>

@@ -64,7 +64,7 @@ export function CreateKanbanDialog({
     },
     mutationFn: async (data: { name: string; imagem: string }) => {
       if (!kanban?.id) await api.post("/kanban/kanban", data);
-      else if (kanban?.id) await api.patch(`kanban/kanban/${kanban.id}/update`);
+      else if (kanban?.id) await api.patch(`kanban/kanban/${kanban.id}/update`, data);
     },
   });
 

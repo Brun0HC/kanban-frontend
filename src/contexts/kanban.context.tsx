@@ -97,7 +97,7 @@ export function KanbanContextProvider() {
       const kanban: IKanban = {
         id: data.kanban.id,
         idMemberCreator: { id: data.kanban.idMemberCreator },
-        image: data.kanban.imagem,
+        imagem: data.kanban.imagem,
         name: data.kanban.name,
       };
 

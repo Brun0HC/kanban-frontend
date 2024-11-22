@@ -14,7 +14,7 @@ export const memberData: IMember[] = Array.from({ length: 1 }, (_, index) => ({
 export const kanbanData: IKanban[] = Array.from({ length: 10 }, (_, index) => ({
   id: index,
   name: faker.lorem.words(),
-  image: faker.image.avatar(),
+  imagem: faker.image.avatar(),
   idMemberCreator: {
     id: Math.floor(1 * Math.random()),
   },
